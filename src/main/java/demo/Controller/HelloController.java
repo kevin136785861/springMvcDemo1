@@ -27,4 +27,28 @@ public class HelloController {
         System.out.println("testhello......"+num);
         return "hello";
     }
+
+    @RequestMapping(value="/testRESTGet/{id}",method=RequestMethod.GET)
+    public String testRESTGet(@PathVariable(value="id")Integer id){
+        System.out.println("testRESTGetid="+id);
+        return"hello";
+    }
+
+    @RequestMapping(value="/testRESTPost",method=RequestMethod.POST)
+    public String testRESTPost(){
+        System.out.println("testRESTPost");
+        return"hello";
+    }
+
+    @RequestMapping(value="/testRESTPut/{id}",method=RequestMethod.PUT)
+    public String testRESTPut(@PathVariable("id")Integer id){
+        System.out.println("testRESTPutid="+id);
+        return"hello";
+    }
+
+    @RequestMapping(value="/testRESTDelete/{id}",method=RequestMethod.DELETE)
+    public String testRESTDelete(@PathVariable("id")Integer id){
+        System.out.println("testRESTDeleteid="+id);
+        return"hello";
+    }
 }
