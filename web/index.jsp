@@ -11,8 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  <a href="${pageContext.request.contextPath}/hello">HelloWorld</a>
-  <form action="hellocon/testhello" method="post">
+  <a href="hellocon/testRequestParam?username=哈哈哈&age=10&_method=post">testRequestParam</a>
+  <form action="hellocon/testRequestParam?username=哈哈哈&age=10" method="post">
     <input type="submit" value="submit">
   </form>
   </body>

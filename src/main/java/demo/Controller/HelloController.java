@@ -1,10 +1,12 @@
 package demo.Controller;
 
 
+import demo.damain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("hellocon")
@@ -50,5 +52,17 @@ public class HelloController {
     public String testRESTDelete(@PathVariable("id")Integer id){
         System.out.println("testRESTDeleteid="+id);
         return"hello";
+    }
+
+    @RequestMapping(value = "testRequestParam",method = RequestMethod.POST)
+    public String testRequestParam(@RequestParam("username") String username,int age){
+        System.out.println("testRequestParam-username="+username+",age="+age);
+        return "hello";
+    }
+
+    @RequestMapping("/testPOJO")
+    public String testPojo(User user) {
+        System.out.println("testPojo:" + user);
+        return "hello";
     }
 }

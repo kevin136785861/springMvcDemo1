@@ -28,5 +28,13 @@
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="testRESTDelete">
 </form>
+
+<form action="testPOJO" method="POST">
+    username:<input type="text" name="username"/><br>
+    password:<input type="password" name="password"/><br>
+    email:<input type="text" name="email"/><br>
+    age:<input type="text" name="age"/><br>
+    <input type="submit" value="Submit"/>
+</form>
 </body>
 </html>
